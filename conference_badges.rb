@@ -19,12 +19,10 @@ def assign_rooms(attendees_for_room)
 end
 
 def printer(attendees)
-  array_of_strings = batch_badge_creator(attendees)
-  array_of_strings.each do |greeting_string|
-    puts greeting_string
+  batch_badge_creator(attendees).each do |badge|
+    puts badge
   end
-  second_array_of_strings = assign_rooms(attendees)
-  second_array_of_strings.each do |room_number|
-    puts room_number
+  assign_rooms(attendees).each do |assignment|
+    puts assignment
   end
 end
